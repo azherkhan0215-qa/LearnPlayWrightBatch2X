@@ -110,9 +110,9 @@ We have compiled a handy reference of **VS Code default keyboard shortcuts** to 
 
 ## Folder README
 
-For a detailed guide on the VS Code shortcuts and how to use them, check out the chapter-specific README:
+For a detailed guide on the VS Code shortcuts and how to use them, check out the chapter-specific guide:
 
-[`chapter_3_Identifier_Literals/README.md`](chapter_3_Identifier_Literals/README.md)
+[`chapter_3_Identifier_Literals/VS_Code_Shortcuts_Guide.md`](chapter_3_Identifier_Literals/VS_Code_Shortcuts_Guide.md)
 
 ---
 
