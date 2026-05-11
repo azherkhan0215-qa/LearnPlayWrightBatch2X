@@ -12,6 +12,7 @@ Welcome to the **Learn Playwright Batch 2X** repository! This project is a struc
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [VS Code Shortcuts](#vs-code-shortcuts)
+- [Chapter 4: JavaScript Concepts](#chapter-4-javascript-concepts)
 - [Contributing](#contributing)
 
 ---
@@ -36,6 +37,7 @@ LearnPlayWrightBatch2X/
 ├── chapter_01_Basics/              # JavaScript basics & setup
 ├── chapter_02_JavaScript_Concepts/ # Core JavaScript concepts
 ├── chapter_3_Identifier_Literals/  # Identifiers, literals, comments & VS Code shortcuts
+├── chapter_4_JavaScript_Concepts/  # var, let, const, functions, scope, hoisting
 ├── README.md                       # You are here!
 └── .git/                           # Git version control
 ```
@@ -49,6 +51,7 @@ LearnPlayWrightBatch2X/
 | **Chapter 1** | [`chapter_01_Basics`](chapter_01_Basics) | Hello World, variables, setup verification, hot code reloading |
 | **Chapter 2** | [`chapter_02_JavaScript_Concepts`](chapter_02_JavaScript_Concepts) | Variables (`var`, `let`, `const`), data types, operators |
 | **Chapter 3** | [`chapter_3_Identifier_Literals`](chapter_3_Identifier_Literals) | Identifier naming rules, literals, comments, VS Code shortcuts |
+| **Chapter 4** | [`chapter_4_JavaScript_Concepts`](chapter_4_JavaScript_Concepts) | `var`/`let`/`const`, functions, scope, hoisting |
 
 Each chapter contains `.js` files that you can run directly with Node.js to see the output.
 
