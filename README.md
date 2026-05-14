@@ -13,6 +13,7 @@ Welcome to the **Learn Playwright Batch 2X** repository! This project is a struc
 - [Prerequisites](#prerequisites)
 - [VS Code Shortcuts](#vs-code-shortcuts)
 - [Chapter 4: JavaScript Concepts](#chapter-4-javascript-concepts)
+- [Chapter 5: Literals](#chapter-5-literals)
 - [Contributing](#contributing)
 
 ---
@@ -38,6 +39,7 @@ LearnPlayWrightBatch2X/
 ├── chapter_02_JavaScript_Concepts/ # Core JavaScript concepts
 ├── chapter_3_Identifier_Literals/  # Identifiers, literals, comments & VS Code shortcuts
 ├── chapter_4_JavaScript_Concepts/  # var, let, const, functions, scope, hoisting
+├── chapter_05_Literal/             # Number, String, Boolean, null, undefined, template literals
 ├── README.md                       # You are here!
 └── .git/                           # Git version control
 ```
@@ -52,6 +54,7 @@ LearnPlayWrightBatch2X/
 | **Chapter 2** | [`chapter_02_JavaScript_Concepts`](chapter_02_JavaScript_Concepts) | Variables (`var`, `let`, `const`), data types, operators |
 | **Chapter 3** | [`chapter_3_Identifier_Literals`](chapter_3_Identifier_Literals) | Identifier naming rules, literals, comments, VS Code shortcuts |
 | **Chapter 4** | [`chapter_4_JavaScript_Concepts`](chapter_4_JavaScript_Concepts) | `var`/`let`/`const`, functions, scope, hoisting |
+| **Chapter 5** | [`chapter_05_Literal`](chapter_05_Literal) | Number types, String literals, Boolean, null vs undefined, template literals |
 
 Each chapter contains `.js` files that you can run directly with Node.js to see the output.
 
@@ -116,6 +119,28 @@ We have compiled a handy reference of **VS Code default keyboard shortcuts** to 
 For a detailed guide on the VS Code shortcuts and how to use them, check out the chapter-specific guide:
 
 [`chapter_3_Identifier_Literals/VS_Code_Shortcuts_Guide.md`](chapter_3_Identifier_Literals/VS_Code_Shortcuts_Guide.md)
+
+---
+
+## Chapter 5: Literals
+
+This chapter dives into JavaScript literal values and data types:
+
+| File | Topic |
+| :--- | :--- |
+| [`22_Literal.js`](chapter_05_Literal/22_Literal.js) | Introduction to literals |
+| [`23_null_undefined.js`](chapter_05_Literal/23_null_undefined.js) | Difference between `null` and `undefined` |
+| [`24_null.js`](chapter_05_Literal/24_null.js) | Working with `null` |
+| [`25_Literal_All.js`](chapter_05_Literal/25_Literal_All.js) | All literal types overview |
+| [`26_Literal_Number_all.js`](chapter_05_Literal/26_Literal_Number_all.js) | All number formats: integer, float, hex, binary, octal, BigInt, Infinity, NaN |
+| [`27_String.js`](chapter_05_Literal/27_String.js) | String literals and operations |
+| [`28_Template_Literal.js`](chapter_05_Literal/28_Template_Literal.js) | Template literals with backticks |
+| [`29_Backtick_single_double.js`](chapter_05_Literal/29_Backtick_single_double.js) | Single quotes vs double quotes vs backticks |
+
+Run any file with:
+```bash
+node chapter_05_Literal/22_Literal.js
+```
 
 ---
 
