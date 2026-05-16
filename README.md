@@ -14,6 +14,7 @@ Welcome to the **Learn Playwright Batch 2X** repository! This project is a struc
 - [VS Code Shortcuts](#vs-code-shortcuts)
 - [Chapter 4: JavaScript Concepts](#chapter-4-javascript-concepts)
 - [Chapter 5: Literals](#chapter-5-literals)
+- [Chapter 6: Operators & Comparisons](#chapter-6-operators--comparisons)
 - [Contributing](#contributing)
 
 ---
@@ -40,6 +41,7 @@ LearnPlayWrightBatch2X/
 ├── chapter_3_Identifier_Literals/  # Identifiers, literals, comments & VS Code shortcuts
 ├── chapter_4_JavaScript_Concepts/  # var, let, const, functions, scope, hoisting
 ├── chapter_05_Literal/             # Number, String, Boolean, null, undefined, template literals
+├── chapter_06_double_triple_equal/ # Operators, comparison (== vs ===), logical, ternary, nullish coalescing
 ├── README.md                       # You are here!
 └── .git/                           # Git version control
 ```
@@ -55,6 +57,7 @@ LearnPlayWrightBatch2X/
 | **Chapter 3** | [`chapter_3_Identifier_Literals`](chapter_3_Identifier_Literals) | Identifier naming rules, literals, comments, VS Code shortcuts |
 | **Chapter 4** | [`chapter_4_JavaScript_Concepts`](chapter_4_JavaScript_Concepts) | `var`/`let`/`const`, functions, scope, hoisting |
 | **Chapter 5** | [`chapter_05_Literal`](chapter_05_Literal) | Number types, String literals, Boolean, null vs undefined, template literals |
+| **Chapter 6** | [`chapter_06_double_triple_equal`](chapter_06_double_triple_equal) | Arithmetic, comparison (`==` vs `===`), logical, ternary, increment/decrement, nullish coalescing |
 
 Each chapter contains `.js` files that you can run directly with Node.js to see the output.
 
@@ -140,6 +143,35 @@ This chapter dives into JavaScript literal values and data types:
 Run any file with:
 ```bash
 node chapter_05_Literal/22_Literal.js
+```
+
+---
+
+## Chapter 6: Operators & Comparisons
+
+This chapter covers JavaScript operators from basic arithmetic to advanced comparison and logical operators:
+
+| File | Topic |
+| :--- | :--- |
+| [`30_Operator.js`](chapter_06_double_triple_equal/30_Operator.js) | Assignment operators |
+| [`31_Arithmetic_OP.js`](chapter_06_double_triple_equal/31_Arithmetic_OP.js) | Arithmetic operators (`+`, `-`, `*`, `/`) |
+| [`32_Modulus_OP.js`](chapter_06_double_triple_equal/32_Modulus_OP.js) | Modulus (`%`) operator |
+| [`33_Expo_OP.js`](chapter_06_double_triple_equal/33_Expo_OP.js) | Exponentiation (`**`) operator |
+| [`34_IQ.js`](chapter_06_double_triple_equal/34_IQ.js) | Interview questions on operators |
+| [`35_Comparsion_OP.js`](chapter_06_double_triple_equal/35_Comparsion_OP.js) | Comparison operators (`>`, `<`, `>=`, `<=`) |
+| [`36_Comparsion_Strict_loose.js`](chapter_06_double_triple_equal/36_Comparsion_Strict_loose.js) | Loose (`==`) vs Strict (`===`) comparison |
+| [`37_IQ_Loose_Strict.js`](chapter_06_double_triple_equal/37_IQ_Loose_Strict.js) | Interview questions on loose vs strict |
+| [`38_Confusing_Comparsion.js`](chapter_06_double_triple_equal/38_Confusing_Comparsion.js) | Tricky comparison scenarios |
+| [`39_Logical_Op.js`](chapter_06_double_triple_equal/39_Logical_Op.js) | Logical operators (`&&`, `\|\|`, `!`) |
+| [`40_String_Con_Op.js`](chapter_06_double_triple_equal/40_String_Con_Op.js) | String concatenation operators |
+| [`41_Ternary_Op.js`](chapter_06_double_triple_equal/41_Ternary_Op.js) | Ternary (conditional) operator |
+| [`42_Type_Op.js`](chapter_06_double_triple_equal/42_Type_Op.js) | Type operators (`typeof`, `instanceof`) |
+| [`43_Incre_Decre_Op.js`](chapter_06_double_triple_equal/43_Incre_Decre_Op.js) | Increment (`++`) and decrement (`--`) operators |
+| [`44_Null_Op.js`](chapter_06_double_triple_equal/44_Null_Op.js) | Nullish coalescing operator (`??`) |
+
+Run any file with:
+```bash
+node chapter_06_double_triple_equal/30_Operator.js
 ```
 
 ---
