@@ -49,3 +49,10 @@ console.log(theme); // Light Theme Applied
 let x = 10, y = 20, z = 30;
 let largest = x > y ? (x > z ? x : z) : (y > z ? y : z);
 console.log(largest); // 30
+
+
+
+
+let a = 5; 
+console.log(a++ + ++a - --a + a-- + ++a); 
+console.log(a);

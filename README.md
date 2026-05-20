@@ -46,9 +46,9 @@ graph TB
             ch4["Ch 4: var / let / const & Hoisting ✅"]
             ch5["Ch 5: Literals ✅"]
             ch6["Ch 6: Operators ✅"]
-            ch7["Ch 7: If / Else"]
-            ch8["Ch 8: Switch"]
-            ch9["Ch 9: Loops"]
+            ch7["Ch 7: If / Else ✅"]
+            ch8["Ch 8: Switch ✅"]
+            ch9["Ch 9: Loops ✅"]
             ch10["Ch 10: Arrays"]
             ch11["Ch 11: Functions & Strings"]
         end
@@ -155,7 +155,41 @@ LearnPlaywrightBatch2X/
 │   ├── 41_Ternary_Op.js                # a ? b : ternary operator
 │   ├── 42_Type_Op.js                   # typeof operator
 │   ├── 43_Incre_Decre_Op.js            # ++ -- pre/post increment/decrement
-│   └── 44_Null_Op.js                   # ?? nullish coalescing operator
+│   ├── 44_Null_Op.js                   # ?? nullish coalescing operator
+│   ├── 45_Post_Increment.js            # Post-increment vs pre-increment deep dive
+│   ├── 46_IQ_INCREMENT_D.js            # Increment/decrement interview questions
+│   └── 47_Advance_ID_.js               # Advanced identifier & operator patterns
+│
+├── chapter_07_If_else/                 ✅ If / Else — control flow decisions
+│   ├── 48_IF_ESLE.js                   # Basic if / else syntax
+│   ├── 49_If_elseif_else.js            # if / else if / else ladder
+│   ├── 50_REAL_IF_ELSE.js              # Real-world if/else examples
+│   ├── 51_API_IF_ELSE.js               # API response handling with if/else
+│   ├── 52_IQ_IF_ELSE.js                # If/else interview questions
+│   ├── 53_IF_ELSE_real.js              # More real-world conditional patterns
+│   ├── 54_IQ.js                        # Interview quick-fire: conditionals
+│   ├── 55_IE.js                        # Internet Explorer compatibility patterns
+│   ├── 56_IQ_EVEN_ODD.js               # Even/odd check using modulus
+│   ├── 57_Grade_Calc.js                # Grade calculator (if-else-if ladder)
+│   ├── 58_LEAP_YEAR.js                 # Leap year logic with nested conditions
+│   └── If_Else_Test.js                 # Practice test file
+│
+├── chapter_08_Switch_Statement/        ✅ Switch — multi-way branching
+│   ├── 59_Switch.js                    # Basic switch statement syntax
+│   ├── 60_No_Break.js                  # Fall-through behavior without break
+│   ├── 61_Default.js                   # Default case handling
+│   ├── 62_REAL_TIME_EXAMPLE.js         # Real-world switch examples
+│   ├── 63_Switch_Group.js              # Grouping multiple cases
+│   ├── 64_IQ.js                        # Switch interview questions
+│   ├── 65_IQ2.js                       # More switch Q&A
+│   ├── 66_IQ3.js                       # Switch edge cases
+│   └── 67_IQ4.js                       # Advanced switch patterns
+│
+├── chapter_09_UserInput/               ✅ User Input — reading from CLI
+│   ├── 68_User_Input.js                # Browser prompt-based input
+│   ├── 69_Node_readline.js             # Node.js readline module
+│   ├── 70_prompt_sync.js               # Synchronous prompt input
+│   └── test.js                         # Input handling test file
 │
 └── README.md                           👋 You are here
 ```
@@ -1043,15 +1077,149 @@ console.log(isActive ?? true);   // false (false is NOT nullish)
 
 ---
 
+## 📖 What's in Chapter 7 — If / Else (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `48_IF_ESLE.js` | Basic If/Else | `if (condition) { … } else { … }` syntax |
+| `49_If_elseif_else.js` | If-Else-If Ladder | Chaining multiple conditions |
+| `50_REAL_IF_ELSE.js` | Real-World Examples | Practical conditional logic patterns |
+| `51_API_IF_ELSE.js` | API Handling | Conditional branching on API responses |
+| `52_IQ_IF_ELSE.js` | Interview Q&A | Common if/else interview questions |
+| `53_IF_ELSE_real.js` | More Patterns | Additional real-world conditional examples |
+| `54_IQ.js` | Quick-Fire IQ | Short conditional reasoning problems |
+| `55_IE.js` | Compatibility | Browser-specific conditional checks |
+| `56_IQ_EVEN_ODD.js` | Even/Odd Check | Using `%` operator inside conditions |
+| `57_Grade_Calc.js` | Grade Calculator | Multi-branch if-else-if scoring logic |
+| `58_LEAP_YEAR.js` | Leap Year | Nested conditions for calendar logic |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 7 — If / Else))
+    Basic Syntax
+      if (condition)
+      else
+    Chaining
+      else if
+      Multiple branches
+    Patterns
+      Even / odd
+      Grade calc
+      Leap year
+    Real World
+      API responses
+      Validation
+```
+
+### Run them
+
+```bash
+node chapter_07_If_else/48_IF_ESLE.js           # → basic if/else voting example
+node chapter_07_If_else/57_Grade_Calc.js        # → grade calculator
+node chapter_07_If_else/58_LEAP_YEAR.js         # → leap year check
+```
+
+---
+
+## 📖 What's in Chapter 8 — Switch Statement (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `59_Switch.js` | Basic Switch | `switch (expr) { case x: … }` syntax |
+| `60_No_Break.js` | Fall-Through | What happens when `break` is omitted |
+| `61_Default.js` | Default Case | Handling unmatched values |
+| `62_REAL_TIME_EXAMPLE.js` | Real-World Switch | Practical switch usage |
+| `63_Switch_Group.js` | Case Grouping | Multiple cases sharing one block |
+| `64_IQ.js` | Interview Q&A | Switch statement interview traps |
+| `65_IQ2.js` | More Q&A | Additional switch questions |
+| `66_IQ3.js` | Edge Cases | Unexpected switch behaviors |
+| `67_IQ4.js` | Advanced Patterns | Complex switch scenarios |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 8 — Switch))
+    Syntax
+      switch (expression)
+      case value:
+      break
+    Behavior
+      Strict equality (===)
+      Fall-through
+      Default case
+    Patterns
+      Grouping cases
+      Real-world examples
+    Traps
+      Missing break
+      Type coercion avoided
+```
+
+### Run them
+
+```bash
+node chapter_08_Switch_Statement/59_Switch.js              # → basic switch day example
+node chapter_08_Switch_Statement/60_No_Break.js            # → fall-through behavior
+node chapter_08_Switch_Statement/62_REAL_TIME_EXAMPLE.js   # → real-world switch usage
+```
+
+---
+
+## 📖 What's in Chapter 9 — User Input (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `68_User_Input.js` | Browser Prompt | `prompt()` for browser-based input |
+| `69_Node_readline.js` | Node Readline | CLI input using `readline` module |
+| `70_prompt_sync.js` | Sync Prompt | Synchronous user input patterns |
+| `test.js` | Test File | Input handling experiments |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 9 — User Input))
+    Browser
+      prompt()
+      alert()
+    Node.js
+      readline module
+      createInterface
+      question()
+    Conversion
+      String → Number
+      Validation
+    Patterns
+      Even/odd from input
+      Menu driven programs
+```
+
+### Run them
+
+```bash
+node chapter_09_UserInput/69_Node_readline.js    # → interactive CLI input
+node chapter_09_UserInput/70_prompt_sync.js      # → synchronous prompt demo
+```
+
+---
+
 ## 🔭 What's Coming Next
 
 ```mermaid
 graph TD
-    subgraph next["Next Up — Control Flow & Data Structures"]
-        N1["Ch 7: If / Else Statements"] --> N2[Ch 8: Switch Cases]
-        N2 --> N3[Ch 9: Loops — for, while, do-while]
-        N3 --> N4[Ch 10: Arrays & Functions]
-        N4 --> N5[Ch 11: Strings & Objects]
+    subgraph next["Next Up — Data Structures & Functions"]
+        N1["Ch 10: Arrays"] --> N2[Ch 11: Functions & Strings]
+        N2 --> N3[Ch 12: Objects]
+        N3 --> N4[Ch 13: 2D Arrays]
     end
 
     style next fill:#fff3e0,stroke:#e65100
@@ -1064,6 +1232,9 @@ graph TD
 - ✅ Chapter 4 — **var/let/const & Hoisting**: Deep dives, TDZ, interview traps (files `09`–`21`)
 - ✅ Chapter 5 — **Literals**: null/undefined, every number form, strings, template literals (files `22`–`29`)
 - ✅ Chapter 6 — **Operators**: arithmetic, comparison (`==` vs `===`), confusing-comparisons reference, logical, string concat, ternary, increment/decrement, nullish coalescing (files `30`–`44`)
+- ✅ Chapter 7 — **If / Else**: Basic syntax, if-else-if ladder, real-world examples, API handling, grade calculator, leap year (files `48`–`58`)
+- ✅ Chapter 8 — **Switch Statement**: Basic switch, fall-through, default, case grouping, interview traps (files `59`–`67`)
+- ✅ Chapter 9 — **User Input**: Browser prompt, Node readline, synchronous input, validation (files `68`–`70`)
 
 ---
 
