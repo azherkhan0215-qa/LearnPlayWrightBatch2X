@@ -49,7 +49,7 @@ graph TB
             ch7["Ch 7: If / Else ✅"]
             ch8["Ch 8: Switch ✅"]
             ch9["Ch 9: Loops ✅"]
-            ch10["Ch 10: Arrays"]
+            ch10["Ch 10: Loops ✅"]
             ch11["Ch 11: Functions & Strings"]
         end
 
@@ -190,6 +190,21 @@ LearnPlaywrightBatch2X/
 │   ├── 69_Node_readline.js             # Node.js readline module
 │   ├── 70_prompt_sync.js               # Synchronous prompt input
 │   └── test.js                         # Input handling test file
+│
+├── chapter_10_Loops/                   ✅ Loops — for, while, do-while
+│   ├── 71_For_loop.js                  # Why loops exist — repeating code
+│   ├── 72_For_loop.js                  # Basic for loop syntax
+│   ├── 73_For_Loop2.js                 # for loop with different bounds
+│   ├── 74_IQ.js                        # for loop edge cases & IQ
+│   ├── 75_For_OF_IN_EACH.js            # while loop intro (for...of/in later)
+│   ├── 76_While.js                     # while loop — condition before entry
+│   ├── 77_Do_While.js                  # do-while — execute at least once
+│   ├── 78_Do_While.js                  # do-while retry pattern
+│   ├── 79_IQ.js                        # while loop countdown IQ
+│   ├── 80_IQ.js                        # do-while edge case IQ
+│   ├── 81_IQ.js                        # Loop interview questions
+│   ├── 82_IQ.js                        # Advanced loop IQ
+│   └── Test.js                         # Loop practice test file
 │
 └── README.md                           👋 You are here
 ```
@@ -1212,14 +1227,65 @@ node chapter_09_UserInput/70_prompt_sync.js      # → synchronous prompt demo
 
 ---
 
+## 📖 What's in Chapter 10 — Loops (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `71_For_loop.js` | Why loops? | Repetitive `console.log` vs a loop |
+| `72_For_loop.js` | Basic for loop | `for (let i = 0; i <= 5; i++)` syntax |
+| `73_For_Loop2.js` | for loop variations | Different bounds and variable names |
+| `74_IQ.js` | for loop IQ | Edge cases, infinite loops, conditions inside loops |
+| `75_For_OF_IN_EACH.js` | while loop intro | `while` loop basics (for...of/in covered later with arrays) |
+| `76_While.js` | while loop | Condition-checked-before-entry loop |
+| `77_Do_While.js` | do-while | Execute at least once, then check condition |
+| `78_Do_While.js` | do-while pattern | Retry / polling pattern with do-while |
+| `79_IQ.js` | while IQ | Countdown and reverse iteration |
+| `80_IQ.js` | do-while IQ | Edge case where body runs once despite condition |
+| `81_IQ.js` | Loop IQ | More loop interview questions |
+| `82_IQ.js` | Loop IQ | Advanced loop patterns |
+| `Test.js` | Practice | Loop practice test file |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 10 — Loops))
+    for loop
+      Init
+      Condition
+      Increment
+    while loop
+      Check then run
+    do-while loop
+      Run then check
+      At least once
+    Patterns
+      Count up
+      Count down
+      Retry logic
+```
+
+### Run them
+
+```bash
+node chapter_10_Loops/72_For_loop.js          # → 0 to 5
+node chapter_10_Loops/76_While.js             # → while loop example
+node chapter_10_Loops/77_Do_While.js         # → do-while at least once
+node chapter_10_Loops/79_IQ.js              # → countdown
+```
+
+---
+
 ## 🔭 What's Coming Next
 
 ```mermaid
 graph TD
     subgraph next["Next Up — Data Structures & Functions"]
-        N1["Ch 10: Arrays"] --> N2[Ch 11: Functions & Strings]
-        N2 --> N3[Ch 12: Objects]
-        N3 --> N4[Ch 13: 2D Arrays]
+        N1["Ch 11: Arrays"] --> N2[Ch 12: Functions & Strings]
+        N2 --> N3[Ch 13: Objects]
+        N3 --> N4[Ch 14: 2D Arrays]
     end
 
     style next fill:#fff3e0,stroke:#e65100
@@ -1235,6 +1301,7 @@ graph TD
 - ✅ Chapter 7 — **If / Else**: Basic syntax, if-else-if ladder, real-world examples, API handling, grade calculator, leap year (files `48`–`58`)
 - ✅ Chapter 8 — **Switch Statement**: Basic switch, fall-through, default, case grouping, interview traps (files `59`–`67`)
 - ✅ Chapter 9 — **User Input**: Browser prompt, Node readline, synchronous input, validation (files `68`–`70`)
+- ✅ Chapter 10 — **Loops**: for, while, do-while, interview questions (files `71`–`82`)
 
 ---
 
