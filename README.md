@@ -48,13 +48,14 @@ graph TB
             ch6["Ch 6: Operators ✅"]
             ch7["Ch 7: If / Else ✅"]
             ch8["Ch 8: Switch ✅"]
-            ch9["Ch 9: Loops ✅"]
+            ch9["Ch 9: User Input ✅"]
             ch10["Ch 10: Loops ✅"]
-            ch11["Ch 11: Functions & Strings"]
+            ch11["Ch 11: Arrays ✅"]
+            ch12["Ch 12: Functions & Strings ✅"]
         end
 
         subgraph adv["⚙️ Advanced JS"]
-            adv1["Ch 12: Objects"]
+            adv1["Ch 13: Objects"]
             adv2["Ch 13: 2D Arrays"]
             adv3["Ch 14: Callbacks"]
             adv4["Ch 15: Promises"]
@@ -206,6 +207,31 @@ LearnPlaywrightBatch2X/
 │   ├── 82_IQ.js                        # Advanced loop IQ
 │   └── Test.js                         # Loop practice test file
 │
+├── chapter_11_Arrays/                  ✅ Arrays — create, access, search, transform
+│   ├── 83_Arrays.js                    # Array basics — empty, literal, mixed types
+│   ├── 84_Arrays.js                    # Creating arrays (constructor, Array.of, Array.from)
+│   ├── 85_Access_Array.js              # Access & modify elements, .at() with negatives
+│   ├── 86_Arrays_Adding_Remove.js      # push, pop, unshift, shift
+│   ├── 87_Adding_Remove2.js             # splice — delete, add, replace
+│   ├── 88_REAL_Example.js             # Real-world browser array example
+│   ├── 89_Searching.js                # indexOf, lastIndexOf, includes, find, findIndex
+│   ├── 90_Iterate.js                  # for, for...of, forEach, for...in, .entries()
+│   ├── 91_Transform_Array.js          # map, filter, reduce, flat
+│   ├── 92_Arrays.js                   # sort — default vs custom comparator
+│   ├── 93_Array_Slicing.js            # slice vs splice
+│   ├── 94_Concat_array.js             # concat, spread ..., join
+│   └── 95_Array_Checking.js           # Array.isArray, every, some
+│
+├── chapter_12_Functions/               ✅ Functions — declarations, expressions, arrow
+│   ├── 96_Functions.js                 # Function definition & call basics
+│   ├── 97_Type1_Fn_Basic_Functions.js  # Type 1: no param, no return
+│   ├── 98_Type2_Fn_With_Param_No_Return.js  # Type 2: with param, no return
+│   ├── 99_Type3_Fn_without_Param_Return_Type.js  # Type 3: no param, with return
+│   ├── 100_Type4_Fn_With_Param_With_Return.js    # Type 4: with param, with return
+│   ├── 101_Template_literal.js         # Template literals inside functions
+│   ├── 102_Fn_Expression.js            # Function expressions
+│   └── 103_Arrow_Fn.js               # Arrow functions (ES6)
+│
 └── README.md                           👋 You are here
 ```
 
@@ -264,9 +290,9 @@ journey
         Switch: 3: Ch8
         Loops: 4: Ch9
     section Data & Functions
-        Arrays: 5: Ch10
-        Functions & Strings: 5: Ch11
-        Objects: 4: Ch12
+        Arrays: 5: Ch11
+        Functions & Strings: 5: Ch12
+        Objects: 4: Ch13
     section Advanced JS
         2D Arrays: 3: Ch13
         Callbacks & Promises: 5: Ch14-Ch15
@@ -285,7 +311,7 @@ journey
 | 2 | Variables & Hoisting | Ch 2–4 | Master `var`/`let`/`const` |
 | 3 | Identifiers, Literals, Operators | Ch 3–6 | Read/write any expression |
 | 4 | Control Flow | Ch 7–9 | If/else, switch, loops |
-| 5 | Arrays & Functions | Ch 10–11 | Manipulate data confidently |
+| 5 | Arrays & Functions | Ch 11–12 | Manipulate data confidently |
 | 6 | Objects & Advanced | Ch 12–13 | Use JS data structures |
 | 7 | Async (Callbacks → Promises) | Ch 14–15 | Handle async work |
 | 8 | Async/Await + OOP | Ch 16–18 | Modern async, classes |
@@ -1278,14 +1304,130 @@ node chapter_10_Loops/79_IQ.js              # → countdown
 
 ---
 
+## 📖 What's in Chapter 11 — Arrays (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `83_Arrays.js` | Array Basics | Empty arrays, literals, mixed types, index access |
+| `84_Arrays.js` | Creating Arrays | `[]`, `new Array()`, `Array.of()`, `Array.from()` |
+| `85_Access_Array.js` | Access & Modify | Index lookup, `.at()` with negative indices, reassignment |
+| `86_Arrays_Adding_Remove.js` | Stack / Queue Ops | `push`, `pop`, `unshift`, `shift` |
+| `87_Adding_Remove2.js` | Splice Deep Dive | `splice(start, deleteCount, ...items)` — delete, add, replace |
+| `88_REAL_Example.js` | Real-World Example | Browser list manipulation with loops |
+| `89_Searching.js` | Searching | `indexOf`, `lastIndexOf`, `includes`, `find`, `findIndex`, `findLast` |
+| `90_Iterate.js` | Iteration | `for`, `for...of`, `forEach`, `for...in`, `.entries()` |
+| `91_Transform_Array.js` | Transform | `map`, `filter`, `reduce`, `flat` |
+| `92_Arrays.js` | Sorting | Default sort vs custom comparator `(a, b) => a - b` |
+| `93_Array_Slicing.js` | Slice vs Splice | `slice(start, end)` (non-mutating) vs `splice` (mutating) |
+| `94_Concat_array.js` | Combine & Join | `concat`, spread `[...a, ...b]`, `.join()` |
+| `95_Array_Checking.js` | Validation | `Array.isArray`, `every`, `some` |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 11 — Arrays))
+    Creation
+      [] literal
+      new Array()
+      Array.of()
+      Array.from()
+    Access
+      index [0]
+      .at(-1)
+    Mutation
+      push pop
+      unshift shift
+      splice
+    Search
+      indexOf
+      includes
+      find findIndex
+    Transform
+      map
+      filter
+      reduce
+      flat
+    Sort
+      default sort
+      compare fn
+    Combine
+      concat
+      spread ...
+      join
+    Validate
+      Array.isArray
+      every some
+```
+
+### Run them
+
+```bash
+node chapter_11_Arrays/83_Arrays.js              # → array basics
+node chapter_11_Arrays/86_Arrays_Adding_Remove.js  # → push, pop, unshift, shift
+node chapter_11_Arrays/91_Transform_Array.js       # → map, filter, reduce
+node chapter_11_Arrays/92_Arrays.js               # → sort behavior
+```
+
+---
+
+## 📖 What's in Chapter 12 — Functions (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `96_Functions.js` | Function Basics | Define → Call workflow |
+| `97_Type1_Fn_Basic_Functions.js` | Type 1 | No parameters, no return value |
+| `98_Type2_Fn_With_Param_No_Return.js` | Type 2 | With parameters, no return value |
+| `99_Type3_Fn_without_Param_Return_Type.js` | Type 3 | No parameters, with return value |
+| `100_Type4_Fn_With_Param_With_Return.js` | Type 4 | With parameters, with return value |
+| `101_Template_literal.js` | Template Literals | `` `Hello, ${name}` `` inside functions |
+| `102_Fn_Expression.js` | Function Expressions | Assigning functions to variables |
+| `103_Arrow_Fn.js` | Arrow Functions | ES6 `=>` syntax, implicit return |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 12 — Functions))
+    Declaration
+      function name()
+    Types
+      No param No return
+      Param No return
+      No param Return
+      Param Return
+    Expressions
+      const fn = function()
+    Arrow Functions
+      () =>
+      implicit return
+    Interpolation
+      Template literals
+```
+
+### Run them
+
+```bash
+node chapter_12_Functions/97_Type1_Fn_Basic_Functions.js              # → basic greet
+node chapter_12_Functions/100_Type4_Fn_With_Param_With_Return.js        # → sum with return
+node chapter_12_Functions/102_Fn_Expression.js                        # → function expression
+node chapter_12_Functions/103_Arrow_Fn.js                               # → arrow syntax
+```
+
+---
+
 ## 🔭 What's Coming Next
 
 ```mermaid
 graph TD
-    subgraph next["Next Up — Data Structures & Functions"]
-        N1["Ch 11: Arrays"] --> N2[Ch 12: Functions & Strings]
-        N2 --> N3[Ch 13: Objects]
-        N3 --> N4[Ch 14: 2D Arrays]
+    subgraph next["Next Up — Advanced JS"]
+        N1["Ch 13: Objects"] --> N2[Ch 14: 2D Arrays]
+        N2 --> N3[Ch 15: Callbacks]
+        N3 --> N4[Ch 16: Promises]
     end
 
     style next fill:#fff3e0,stroke:#e65100
@@ -1302,6 +1444,8 @@ graph TD
 - ✅ Chapter 8 — **Switch Statement**: Basic switch, fall-through, default, case grouping, interview traps (files `59`–`67`)
 - ✅ Chapter 9 — **User Input**: Browser prompt, Node readline, synchronous input, validation (files `68`–`70`)
 - ✅ Chapter 10 — **Loops**: for, while, do-while, interview questions (files `71`–`82`)
+- ✅ Chapter 11 — **Arrays**: Create, access, search, transform, sort, slice, concat, validate (files `83`–`95`)
+- ✅ Chapter 12 — **Functions**: Declarations, expressions, arrow functions, template literals (files `96`–`103`)
 
 ---
 
