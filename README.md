@@ -222,7 +222,7 @@ LearnPlaywrightBatch2X/
 │   ├── 94_Concat_array.js             # concat, spread ..., join
 │   └── 95_Array_Checking.js           # Array.isArray, every, some
 │
-├── chapter_12_Functions/               ✅ Functions — declarations, expressions, arrow
+├── chapter_12_Functions/               ✅ Functions — declarations, expressions, arrow, scope, closures
 │   ├── 96_Functions.js                 # Function definition & call basics
 │   ├── 97_Type1_Fn_Basic_Functions.js  # Type 1: no param, no return
 │   ├── 98_Type2_Fn_With_Param_No_Return.js  # Type 2: with param, no return
@@ -230,7 +230,21 @@ LearnPlaywrightBatch2X/
 │   ├── 100_Type4_Fn_With_Param_With_Return.js    # Type 4: with param, with return
 │   ├── 101_Template_literal.js         # Template literals inside functions
 │   ├── 102_Fn_Expression.js            # Function expressions
-│   └── 103_Arrow_Fn.js               # Arrow functions (ES6)
+│   ├── 103_Arrow_Fn.js               # Arrow functions (ES6)
+│   ├── 104_Arrow_Fn_REAL.js          # Real-world arrow function examples (API validation)
+│   ├── 105_IIFE.js                   # Immediately Invoked Function Expressions
+│   ├── 106_Default_Param_Fn.js       # Default parameters in functions
+│   ├── 107_IQ.js                     # Function interview questions
+│   ├── 108_Rest_Param_Fn.js          # Rest parameters (...args)
+│   ├── 109_IQ.js                     # Return values & hoisting traps
+│   ├── 110_Spead_IQ.js               # Spread operator with functions
+│   ├── 111_Scope._Fn.js              # Global vs local scope in functions
+│   ├── 112_IQ.js                     # Nested scope & closure basics
+│   ├── 113_Closure.js                # Closure fundamentals
+│   ├── 114_Closure.js                # Closure counter pattern
+│   ├── 115_API_REAL_Closure.js       # Real-world closure: retry tracker
+│   ├── 116_Higher_Order_Fn.js        # Higher-order functions
+│   └── 117_Pure_Fn.js                # Pure vs impure functions
 │
 └── README.md                           👋 You are here
 ```
@@ -1387,6 +1401,20 @@ node chapter_11_Arrays/92_Arrays.js               # → sort behavior
 | `101_Template_literal.js` | Template Literals | `` `Hello, ${name}` `` inside functions |
 | `102_Fn_Expression.js` | Function Expressions | Assigning functions to variables |
 | `103_Arrow_Fn.js` | Arrow Functions | ES6 `=>` syntax, implicit return |
+| `104_Arrow_Fn_REAL.js` | Real-World Arrow | API status validation with arrow functions |
+| `105_IIFE.js` | IIFE | Immediately Invoked Function Expressions |
+| `106_Default_Param_Fn.js` | Default Parameters | Fallback values for function arguments |
+| `107_IQ.js` | Interview Q&A | Function return values and patterns |
+| `108_Rest_Param_Fn.js` | Rest Parameters | `...results` — collect varying arguments |
+| `109_IQ.js` | Hoisting Traps | Function expressions vs declarations & TDZ |
+| `110_Spead_IQ.js` | Spread + Functions | Pass arrays as individual arguments |
+| `111_Scope._Fn.js` | Scope | Global vs local variable access in functions |
+| `112_IQ.js` | Nested Scope | Lexical scoping and shadowing |
+| `113_Closure.js` | Closure Basics | Inner function accessing outer variables |
+| `114_Closure.js` | Closure Pattern | Counter with private state |
+| `115_API_REAL_Closure.js` | Real-World Closure | Retry tracker with encapsulated state |
+| `116_Higher_Order_Fn.js` | HOF | Functions taking or returning other functions |
+| `117_Pure_Fn.js` | Pure Functions | Predictable output, no side effects |
 
 ### Key Concepts
 
@@ -1405,8 +1433,23 @@ mindmap
     Arrow Functions
       () =>
       implicit return
-    Interpolation
-      Template literals
+    Advanced
+      Default params
+      Rest ...args
+      Spread ...arr
+    Scope
+      Global
+      Local
+      Lexical
+    Closure
+      Inner accesses outer
+      Private state
+    HOF
+      fn as argument
+      fn as return
+    Pure
+      Same input → same output
+      No side effects
 ```
 
 ### Run them
@@ -1416,6 +1459,13 @@ node chapter_12_Functions/97_Type1_Fn_Basic_Functions.js              # → basi
 node chapter_12_Functions/100_Type4_Fn_With_Param_With_Return.js        # → sum with return
 node chapter_12_Functions/102_Fn_Expression.js                        # → function expression
 node chapter_12_Functions/103_Arrow_Fn.js                               # → arrow syntax
+node chapter_12_Functions/105_IIFE.js                                   # → IIFE patterns
+node chapter_12_Functions/106_Default_Param_Fn.js                     # → default parameters
+node chapter_12_Functions/108_Rest_Param_Fn.js                         # → rest parameters
+node chapter_12_Functions/113_Closure.js                               # → closure basics
+node chapter_12_Functions/115_API_REAL_Closure.js                      # → real-world closure
+node chapter_12_Functions/116_Higher_Order_Fn.js                        # → higher-order functions
+node chapter_12_Functions/117_Pure_Fn.js                               # → pure vs impure
 ```
 
 ---
@@ -1445,7 +1495,7 @@ graph TD
 - ✅ Chapter 9 — **User Input**: Browser prompt, Node readline, synchronous input, validation (files `68`–`70`)
 - ✅ Chapter 10 — **Loops**: for, while, do-while, interview questions (files `71`–`82`)
 - ✅ Chapter 11 — **Arrays**: Create, access, search, transform, sort, slice, concat, validate (files `83`–`95`)
-- ✅ Chapter 12 — **Functions**: Declarations, expressions, arrow functions, template literals (files `96`–`103`)
+- ✅ Chapter 12 — **Functions**: Declarations, expressions, arrow functions, IIFE, default/rest/spread params, scope, closures, higher-order & pure functions (files `96`–`117`)
 
 ---
 
