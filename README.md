@@ -51,31 +51,32 @@ graph TB
             ch9["Ch 9: User Input ✅"]
             ch10["Ch 10: Loops ✅"]
             ch11["Ch 11: Arrays ✅"]
-            ch12["Ch 12: Functions & Strings ✅"]
+            ch12["Ch 12: Functions ✅"]
+            ch13["Ch 13: Strings ✅"]
         end
 
         subgraph adv["⚙️ Advanced JS"]
-            adv1["Ch 13: Objects"]
-            adv2["Ch 13: 2D Arrays"]
-            adv3["Ch 14: Callbacks"]
-            adv4["Ch 15: Promises"]
-            adv5["Ch 16: Async / Await"]
-            adv6["Ch 17: OOP - Classes"]
-            adv7["Ch 18: Inheritance"]
+            adv1["Ch 14: Objects"]
+            adv2["Ch 15: 2D Arrays"]
+            adv3["Ch 16: Callbacks"]
+            adv4["Ch 17: Promises"]
+            adv5["Ch 18: Async / Await"]
+            adv6["Ch 19: OOP - Classes"]
+            adv7["Ch 20: Inheritance"]
         end
 
         subgraph ts["🟦 TypeScript"]
-            ts1["Ch 19: TS Fundamentals"]
-            ts2["Ch 20: Interfaces"]
-            ts3["Ch 21: Enums"]
-            ts4["Ch 22: Generics"]
+            ts1["Ch 21: TS Fundamentals"]
+            ts2["Ch 22: Interfaces"]
+            ts3["Ch 23: Enums"]
+            ts4["Ch 24: Generics"]
         end
 
         subgraph pw["🎭 Playwright"]
-            pw1["Ch 23: PW Fundamentals"]
-            pw2["Ch 24: Locators & Assertions"]
-            pw3["Ch 25: Fixtures & POM"]
-            pw4["Ch 26: Debugging & CI"]
+            pw1["Ch 25: PW Fundamentals"]
+            pw2["Ch 26: Locators & Assertions"]
+            pw3["Ch 27: Fixtures & POM"]
+            pw4["Ch 28: Debugging & CI"]
         end
 
         subgraph extras["🎯 Bonus"]
@@ -246,6 +247,15 @@ LearnPlaywrightBatch2X/
 │   ├── 116_Higher_Order_Fn.js        # Higher-order functions
 │   └── 117_Pure_Fn.js                # Pure vs impure functions
 │
+├── chapter_13_Strings/                 ✅ Strings — create, search, transform, slice, split, join
+│   ├── 118_Strings.js                  # String literals — single, double, backticks, String()
+│   ├── 119_String_Properties.js          # .length, index access, charAt, charCodeAt
+│   ├── 120_Search_Check_Str.js         # includes, startsWith, endsWith, indexOf, search(regex)
+│   ├── 121_Substring.js                # slice, substring — extract parts of a string
+│   ├── 122_Transform_Str.js            # toUpperCase, toLowerCase, trim, replace, split, join
+│   ├── 123_SC.js                       # String conversion — toString, Number, parseInt, parseFloat
+│   └── task.js                         # Practice tasks — palindrome, anagram check
+│
 └── README.md                           👋 You are here
 ```
 
@@ -305,8 +315,9 @@ journey
         Loops: 4: Ch9
     section Data & Functions
         Arrays: 5: Ch11
-        Functions & Strings: 5: Ch12
-        Objects: 4: Ch13
+        Functions: 5: Ch12
+        Strings: 5: Ch13
+        Objects: 4: Ch14
     section Advanced JS
         2D Arrays: 3: Ch13
         Callbacks & Promises: 5: Ch14-Ch15
@@ -326,11 +337,11 @@ journey
 | 3 | Identifiers, Literals, Operators | Ch 3–6 | Read/write any expression |
 | 4 | Control Flow | Ch 7–9 | If/else, switch, loops |
 | 5 | Arrays & Functions | Ch 11–12 | Manipulate data confidently |
-| 6 | Objects & Advanced | Ch 12–13 | Use JS data structures |
-| 7 | Async (Callbacks → Promises) | Ch 14–15 | Handle async work |
-| 8 | Async/Await + OOP | Ch 16–18 | Modern async, classes |
-| 9 | TypeScript | Ch 19–22 | Type-safe automation code |
-| 10–12 | Playwright | Ch 23–26 | First passing test, POM, CI |
+| 6 | Strings & Advanced | Ch 13–14 | Use JS data structures |
+| 7 | Async (Callbacks → Promises) | Ch 16–17 | Handle async work |
+| 8 | Async/Await + OOP | Ch 18–20 | Modern async, classes |
+| 9 | TypeScript | Ch 21–24 | Type-safe automation code |
+| 10–12 | Playwright | Ch 25–28 | First passing test, POM, CI |
 
 ---
 
@@ -1470,14 +1481,83 @@ node chapter_12_Functions/117_Pure_Fn.js                               # → pur
 
 ---
 
+## 📖 What's in Chapter 13 — Strings (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `118_Strings.js` | String Basics | Single quotes, double quotes, backticks with interpolation, multiline strings, `String()` constructor |
+| `119_String_Properties.js` | Properties & Access | `.length`, bracket `[i]` indexing, `.at()` with negatives, `charAt`, `charCodeAt` |
+| `120_Search_Check_Str.js` | Searching & Checking | `includes`, `startsWith`, `endsWith`, `indexOf`, `lastIndexOf`, `search` with regex |
+| `121_Substring.js` | Substring Extraction | `slice(start, end)` with negative indices, `substring(start, end)` — no negatives |
+| `122_Transform_Str.js` | Transform & Mutate | `toUpperCase`, `toLowerCase`, `trim`/`trimStart`/`trimEnd`, `replace`, `replaceAll`, `split`, `join`, `concat` |
+| `123_SC.js` | String Conversion | `toString`, `Number()`, `parseInt`, `parseFloat` — type conversions |
+| `task.js` | Practice Tasks | Palindrome checker, anagram checker using `split`, `reverse`, `sort`, `join` |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 13 — Strings))
+    Creation
+      'single'
+      "double"
+      `template ${x}`
+      String(x)
+    Properties
+      .length
+      [index]
+      .at(-1)
+      charAt
+      charCodeAt
+    Search
+      includes
+      startsWith
+      endsWith
+      indexOf
+      lastIndexOf
+      search regex
+    Extract
+      slice
+      substring
+    Transform
+      toUpperCase
+      toLowerCase
+      trim
+      replace
+      replaceAll
+      split
+      join
+    Convert
+      toString
+      Number
+      parseInt
+      parseFloat
+```
+
+### Run them
+
+```bash
+node chapter_13_Strings/118_Strings.js              # → string literals & interpolation
+node chapter_13_Strings/119_String_Properties.js    # → length, index access, charAt
+node chapter_13_Strings/120_Search_Check_Str.js    # → includes, startsWith, indexOf
+node chapter_13_Strings/121_Substring.js            # → slice & substring extraction
+node chapter_13_Strings/122_Transform_Str.js        # → replace, split, join, trim
+node chapter_13_Strings/123_SC.js                   # → toString, parseInt, parseFloat
+node chapter_13_Strings/task.js                     # → palindrome & anagram checks
+```
+
+---
+
 ## 🔭 What's Coming Next
 
 ```mermaid
 graph TD
     subgraph next["Next Up — Advanced JS"]
-        N1["Ch 13: Objects"] --> N2[Ch 14: 2D Arrays]
-        N2 --> N3[Ch 15: Callbacks]
-        N3 --> N4[Ch 16: Promises]
+        N1["Ch 14: Objects"] --> N2[Ch 15: 2D Arrays]
+        N2 --> N3[Ch 16: Callbacks]
+        N3 --> N4[Ch 17: Promises]
     end
 
     style next fill:#fff3e0,stroke:#e65100
@@ -1496,6 +1576,7 @@ graph TD
 - ✅ Chapter 10 — **Loops**: for, while, do-while, interview questions (files `71`–`82`)
 - ✅ Chapter 11 — **Arrays**: Create, access, search, transform, sort, slice, concat, validate (files `83`–`95`)
 - ✅ Chapter 12 — **Functions**: Declarations, expressions, arrow functions, IIFE, default/rest/spread params, scope, closures, higher-order & pure functions (files `96`–`117`)
+- ✅ Chapter 13 — **Strings**: Literals, properties, search, substring, transform, conversion, practice tasks (files `118`–`123`)
 
 ---
 
