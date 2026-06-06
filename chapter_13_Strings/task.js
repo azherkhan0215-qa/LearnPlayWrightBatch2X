@@ -18,6 +18,7 @@ else
 }
 
 
+//✅ Java Anagrams
 
 let str1 = "Azhar";
 let str2 = "Test";
