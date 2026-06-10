@@ -272,6 +272,14 @@ LearnPlaywrightBatch2X/
 │   ├── 136_Obj_REAL.js                # Real-world objects — ENV configs, API responses, test configs
 │   └── 137_Let_const_obj.js           # `let` vs `const` with objects — mutating properties vs reassigning
 │
+├── chapter_15_2D_Array/                ✅ 2D Arrays — nested arrays, grids, matrix operations
+│   ├── 138_2D_Array.js                 # 2D array basics and nested loops
+│   ├── 139_2D.js                       # 2D array patterns and traversal
+│   ├── 140_REAL.js                     # Real-world 2D array examples
+│   ├── 141_2d_Array_Fn.js              # Functions with 2D arrays
+│   ├── 142_IQ_Right_Pattern_Py.js      # Interview questions — patterns
+│   └── task.js                         # Practice tasks
+│
 └── README.md                           👋 You are here
 ```
 
@@ -1640,6 +1648,53 @@ node chapter_14_Objects/133_Spead.js                 # → spread & shallow copy
 node chapter_14_Objects/134_Objects_GET_SET_Methods.js # → getters & setters
 node chapter_14_Objects/135_IQ.js                     # → keys, values, entries
 node chapter_14_Objects/137_Let_const_obj.js        # → let vs const with objects
+```
+
+---
+
+## 📖 What's in Chapter 15 — 2D Arrays (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `138_2D_Array.js` | 2D Array Basics | Nested arrays, matrix structure, grid representation |
+| `139_2D.js` | 2D Array Patterns | Row-wise and column-wise traversal |
+| `140_REAL.js` | Real-World Examples | Practical 2D array use cases |
+| `141_2d_Array_Fn.js` | Functions with 2D Arrays | Passing 2D arrays to functions |
+| `142_IQ_Right_Pattern_Py.js` | Pattern Problems | Interview pattern questions (pyramid, triangle) |
+| `task.js` | Practice Tasks | Hands-on exercises with 2D arrays |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 15 — 2D Arrays))
+    Structure
+      Array of arrays
+      Matrix/grid
+      grid[row][col]
+    Traversal
+      Row-wise
+      Column-wise
+      Nested loops
+    Patterns
+      Pyramid
+      Triangle
+      Diamond
+    Applications
+      Game boards
+      Image pixels
+      Spreadsheet cells
+```
+
+### Run them
+
+```bash
+node chapter_15_2D_Array/138_2D_Array.js        # → 2D array basics
+node chapter_15_2D_Array/139_2D.js              # → traversal patterns
+node chapter_15_2D_Array/140_REAL.js            # → real-world examples
+node chapter_15_2D_Array/141_2d_Array_Fn.js     # → functions with 2D arrays
 ```
 
 ---
