@@ -57,8 +57,8 @@ graph TB
 
         subgraph adv["⚙️ Advanced JS"]
             adv1["Ch 14: Objects ✅"]
-            adv2["Ch 15: 2D Arrays"]
-            adv3["Ch 16: Callbacks"]
+            adv2["Ch 15: 2D Arrays ✅"]
+            adv3["Ch 16: Callbacks ✅"]
             adv4["Ch 17: Promises"]
             adv5["Ch 18: Async / Await"]
             adv6["Ch 19: OOP - Classes"]
@@ -280,6 +280,19 @@ LearnPlaywrightBatch2X/
 │   ├── 142_IQ_Right_Pattern_Py.js      # Interview questions — patterns
 │   └── task.js                         # Practice tasks
 │
+├── chapter_16_Callback/                ✅ Callbacks — sync, async, callback hell, real-world patterns
+│   ├── 143_Callback.js                 # Callback basics — function as argument
+│   ├── 144_CB.js                       # Callback patterns and usage
+│   ├── 145_CB_Fn.js                    # Callback functions deep dive
+│   ├── 146_PW_CB.js                    # Playwright-style callback patterns
+│   ├── 147_JS_CB.js                    # JavaScript callback examples
+│   ├── 148_Sync_CB.js                  # Synchronous callbacks
+│   ├── 149_Async_CB.js                 # Asynchronous callbacks with setTimeout
+│   ├── 150_CB_Hell.js                  # Callback hell — nested callbacks
+│   ├── 151_CB_Hell_20_Steps.js         # Deep callback nesting example
+│   ├── 152_CB_Parameter.js             # Passing parameters to callbacks
+│   └── 153_CB_Return.js                # Returning values from callbacks
+│
 └── README.md                           👋 You are here
 ```
 
@@ -343,10 +356,10 @@ journey
         Strings: 5: Ch13
         Objects: 4: Ch14
     section Advanced JS
-        2D Arrays: 3: Ch13
-        Callbacks & Promises: 5: Ch14-Ch15
-        Async / Await: 5: Ch16
-        OOP & Inheritance: 5: Ch17-Ch18
+        2D Arrays: 3: Ch15
+        Callbacks & Promises: 5: Ch16-Ch17
+        Async / Await: 5: Ch18
+        OOP & Inheritance: 5: Ch19-Ch20
     section TypeScript
         TS Basics → Generics: 5: Ch19-Ch22
     section Playwright
@@ -1699,14 +1712,66 @@ node chapter_15_2D_Array/141_2d_Array_Fn.js     # → functions with 2D arrays
 
 ---
 
+## 📖 What's in Chapter 16 — Callbacks (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `143_Callback.js` | Callback Basics | Passing a function as an argument |
+| `144_CB.js` | Callback Patterns | Common callback usage patterns |
+| `145_CB_Fn.js` | Callback Functions | Defining and using callback functions |
+| `146_PW_CB.js` | Playwright Callbacks | Callback patterns inspired by Playwright |
+| `147_JS_CB.js` | JS Callbacks | Native JavaScript callback examples |
+| `148_Sync_CB.js` | Synchronous Callbacks | Callbacks that execute immediately |
+| `149_Async_CB.js` | Async Callbacks | Callbacks with `setTimeout` — delayed execution |
+| `150_CB_Hell.js` | Callback Hell | Nested callbacks becoming unreadable |
+| `151_CB_Hell_20_Steps.js` | Deep Nesting | 20-step nested callback example |
+| `152_CB_Parameter.js` | Parameters to Callbacks | Passing data into callback functions |
+| `153_CB_Return.js` | Return from Callbacks | Getting values back from callbacks |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 16 — Callbacks))
+    Basics
+      Function as argument
+      Higher-order function
+      Callback execution
+    Types
+      Synchronous
+      Asynchronous
+    Patterns
+      Array methods (forEach, map, filter)
+      Event handlers
+      Timers (setTimeout)
+    Problems
+      Callback Hell
+      Pyramid of doom
+      Error handling
+```
+
+### Run them
+
+```bash
+node chapter_16_Callback/143_Callback.js         # → callback basics
+node chapter_16_Callback/148_Sync_CB.js          # → synchronous callbacks
+node chapter_16_Callback/149_Async_CB.js         # → async callbacks with setTimeout
+node chapter_16_Callback/150_CB_Hell.js          # → callback hell demo
+node chapter_16_Callback/151_CB_Hell_20_Steps.js # → deep nesting example
+```
+
+---
+
 ## 🔭 What's Coming Next
 
 ```mermaid
 graph TD
     subgraph next["Next Up — Advanced JS"]
-        N1["Ch 15: 2D Arrays"] --> N2[Ch 16: Callbacks]
-        N2 --> N3[Ch 17: Promises]
-        N3 --> N4[Ch 18: Async / Await]
+        N1["Ch 17: Promises ✅"]
+        N2["Ch 18: Async / Await"]
+        N3["Ch 19: OOP - Classes"]
     end
 
     style next fill:#fff3e0,stroke:#e65100
@@ -1727,6 +1792,8 @@ graph TD
 - ✅ Chapter 12 — **Functions**: Declarations, expressions, arrow functions, IIFE, default/rest/spread params, scope, closures, higher-order & pure functions (files `96`–`117`)
 - ✅ Chapter 13 — **Strings**: Literals, properties, search, substring, transform, conversion, practice tasks (files `118`–`123`)
 - ✅ Chapter 14 — **Objects**: Basics, references, methods, destructuring, spread, getters/setters, iteration, real-world configs (files `124`–`137`)
+- ✅ Chapter 15 — **2D Arrays**: Nested arrays, matrix traversal, grid operations, pattern problems (files `138`–`142`)
+- ✅ Chapter 16 — **Callbacks**: Callback basics, sync vs async callbacks, callback hell, real-world patterns (files `143`–`153`)
 
 ---
 
