@@ -59,9 +59,9 @@ graph TB
             adv1["Ch 14: Objects ✅"]
             adv2["Ch 15: 2D Arrays ✅"]
             adv3["Ch 16: Callbacks ✅"]
-            adv4["Ch 17: Promises"]
-            adv5["Ch 18: Async / Await"]
-            adv6["Ch 19: OOP - Classes"]
+            adv4["Ch 17: Promises ✅"]
+            adv5["Ch 18: Async / Await ✅"]
+            adv6["Ch 19: Playwright Basics ✅"]
             adv7["Ch 20: Inheritance"]
         end
 
@@ -293,6 +293,29 @@ LearnPlaywrightBatch2X/
 │   ├── 152_CB_Parameter.js             # Passing parameters to callbacks
 │   └── 153_CB_Return.js                # Returning values from callbacks
 │
+├── chapter_17_Promise/                  ✅ Promises — resolve, reject, finally, Promise.all
+│   ├── 154_Promise.js                   # Promise basics — resolve & reject
+│   ├── 155_Promise_Real_API.js          # Real-world API simulation with Promises
+│   ├── 156_Promise_Real_API_Part2.js    # API promise chaining
+│   ├── 157_Finally.js                   # finally block — cleanup after resolve/reject
+│   ├── 158_Py_Problem.js               # Problem-solving with promises
+│   ├── 159_Promise_All.js              # Promise.all — running promises in parallel
+│   └── 160_Promise_IQ.js               # Promise interview questions
+│
+├── chapter_18_Async_Await/              ✅ Async/Await — async functions, try/catch, parallel
+│   ├── 161_Async.js                     # async function basics with try/catch/finally
+│   ├── 162_Aysnc_P2.js                  # async/await patterns part 2
+│   ├── 163_PyODom.js                    # Promise-based DOM-like async operations
+│   ├── 164_Async_Ex.js                  # Async execution examples
+│   ├── 165_AA_Parallel.js               # Parallel async/await with Promise.all
+│   ├── 165_AA_Seq.js                    # Sequential async/await execution
+│   ├── 166_IQ.js                        # Async/await interview questions
+│   └── 167_ACLogin.js                   # Playwright login test with async/await
+│
+├── chapter_19_Playwright_Basics/        ✅ Playwright — test runner setup & automation
+│   ├── package.json                     # Playwright dependency config
+│   └── sdetlive.pdf                     # Course reference material
+│
 └── README.md                           👋 You are here
 ```
 
@@ -359,9 +382,9 @@ journey
         2D Arrays: 3: Ch15
         Callbacks & Promises: 5: Ch16-Ch17
         Async / Await: 5: Ch18
-        OOP & Inheritance: 5: Ch19-Ch20
+        Playwright Basics: 3: Ch19
     section TypeScript
-        TS Basics → Generics: 5: Ch19-Ch22
+        TS Basics → Generics: 5: Ch20-Ch23
     section Playwright
         Fundamentals: 5: Ch23
         CLI & Debugging: 5: Ch24-Ch26
@@ -375,8 +398,8 @@ journey
 | 4 | Control Flow | Ch 7–9 | If/else, switch, loops |
 | 5 | Arrays & Functions | Ch 11–12 | Manipulate data confidently |
 | 6 | Strings & Advanced | Ch 13–14 | Use JS data structures |
-| 7 | Async (Callbacks → Promises) | Ch 16–17 | Handle async work |
-| 8 | Async/Await + OOP | Ch 18–20 | Modern async, classes |
+| 7 | Async (Callbacks → Promises) | Ch 16–17 | Handle async work ✅ |
+| 8 | Async/Await + Playwright Basics | Ch 18–19 | Modern async, test runner setup ✅ |
 | 9 | TypeScript | Ch 21–24 | Type-safe automation code |
 | 10–12 | Playwright | Ch 25–28 | First passing test, POM, CI |
 
@@ -398,8 +421,8 @@ flowchart LR
     subgraph D["Async"]
         D1[Callbacks] --> D2[Promises] --> D3[Async/Await]
     end
-    subgraph E["OOP"]
-        E1[Classes] --> E2[Inheritance]
+    subgraph E["Playwright Basics"]
+        E1[Setup & Config]
     end
     subgraph F["TypeScript"]
         F1[Types] --> F2[Interfaces] --> F3[Generics]
@@ -1764,17 +1787,147 @@ node chapter_16_Callback/151_CB_Hell_20_Steps.js # → deep nesting example
 
 ---
 
+## 📖 What's in Chapter 17 — Promises (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `154_Promise.js` | Promise Basics | `new Promise(resolve, reject)` with food delivery example |
+| `155_Promise_Real_API.js` | Real-World API | Simulating API calls with Promises |
+| `156_Promise_Real_API_Part2.js` | API Chaining | Chaining `.then()` for multi-step API flows |
+| `157_Finally.js` | Finally Block | Cleanup with `.finally()` after resolve/reject |
+| `158_Py_Problem.js` | Problem Solving | Using promises to solve coding problems |
+| `159_Promise_All.js` | Promise.all | Running multiple promises in parallel |
+| `160_Promise_IQ.js` | Interview Q&A | Common promise interview questions |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 17 — Promises))
+    Creation
+      new Promise(fn)
+      resolve(value)
+      reject(reason)
+    Consumption
+      .then(success)
+      .catch(error)
+      .finally(cleanup)
+    Patterns
+      Promise.all
+      Chaining
+      Error handling
+    Real World
+      API simulation
+      Async operations
+```
+
+### Run them
+
+```bash
+node chapter_17_Promise/154_Promise.js          # → resolve/reject basics
+node chapter_17_Promise/155_Promise_Real_API.js # → simulated API call
+node chapter_17_Promise/157_Finally.js          # → cleanup with finally
+node chapter_17_Promise/159_Promise_All.js      # → parallel promises
+node chapter_17_Promise/160_Promise_IQ.js       # → interview questions
+```
+
+---
+
+## 📖 What's in Chapter 18 — Async/Await (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `161_Async.js` | Async Basics | `async function`, `await`, try/catch/finally pattern |
+| `162_Aysnc_P2.js` | Async Patterns | More async/await usage patterns |
+| `163_PyODom.js` | DOM-like Async | Promise-based async operations simulating DOM |
+| `164_Async_Ex.js` | Execution Examples | Practical async execution scenarios |
+| `165_AA_Parallel.js` | Parallel Execution | `await Promise.all(...)` for concurrent tasks |
+| `165_AA_Seq.js` | Sequential Execution | Sequential `await` — one task at a time |
+| `166_IQ.js` | Interview Q&A | Async/await interview questions |
+| `167_ACLogin.js` | Playwright Login | Applying async/await to real Playwright login test |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 18 — Async/Await))
+    Async Functions
+      async keyword
+      await keyword
+      Returns promise
+    Error Handling
+      try / catch
+      catch error object
+      finally cleanup
+    Patterns
+      Sequential vs parallel
+      Promise.all with await
+    Real World
+      Playwright test login
+      API retries
+```
+
+### Run them
+
+```bash
+node chapter_18_Async_Await/161_Async.js            # → async/try/catch
+node chapter_18_Async_Await/165_AA_Parallel.js      # → parallel async
+node chapter_18_Async_Await/165_AA_Seq.js           # → sequential async
+node chapter_18_Async_Await/166_IQ.js               # → interview questions
+npx playwright test chapter_18_Async_Await/167_ACLogin.js  # → Playwright login test
+```
+
+---
+
+## 📖 What's in Chapter 19 — Playwright Basics (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `package.json` | Project Setup | Playwright dependency, Node.js project config |
+| `sdetlive.pdf` | Reference | Course reference material PDF |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 19 — Playwright Basics))
+    Setup
+      npm install playwright
+      package.json config
+      Browser binaries
+    Next Steps
+      Test runner setup
+      Writing first test
+      Running with npx
+```
+
+### Run them
+
+```bash
+cd chapter_19_Playwright_Basics
+npm list playwright          # verify Playwright is installed
+npx playwright --version     # check Playwright version
+```
+
+---
+
 ## 🔭 What's Coming Next
 
 ```mermaid
 graph TD
-    subgraph next["Next Up — Advanced JS"]
-        N1["Ch 17: Promises ✅"]
-        N2["Ch 18: Async / Await"]
-        N3["Ch 19: OOP - Classes"]
+    subgraph next["Next Up — TypeScript"]
+        N1["Ch 20: TypeScript Fundamentals"]
+        N2["Ch 21: Interfaces"]
+        N3["Ch 22: Enums & Generics"]
     end
 
-    style next fill:#fff3e0,stroke:#e65100
+    style next fill:#e0f7fa,stroke:#00838f
 ```
 
 **Just shipped:**
@@ -1794,6 +1947,9 @@ graph TD
 - ✅ Chapter 14 — **Objects**: Basics, references, methods, destructuring, spread, getters/setters, iteration, real-world configs (files `124`–`137`)
 - ✅ Chapter 15 — **2D Arrays**: Nested arrays, matrix traversal, grid operations, pattern problems (files `138`–`142`)
 - ✅ Chapter 16 — **Callbacks**: Callback basics, sync vs async callbacks, callback hell, real-world patterns (files `143`–`153`)
+- ✅ Chapter 17 — **Promises**: Promise basics, resolve/reject, finally, Promise.all, API simulations, interview questions (files `154`–`160`)
+- ✅ Chapter 18 — **Async/Await**: async functions, try/catch/finally, parallel vs sequential execution, Playwright login test (files `161`–`167`)
+- ✅ Chapter 19 — **Playwright Basics**: Project setup with Playwright dependency, course reference material
 
 ---
 
