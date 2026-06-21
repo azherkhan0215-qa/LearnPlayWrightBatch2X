@@ -62,7 +62,7 @@ graph TB
             adv4["Ch 17: Promises ✅"]
             adv5["Ch 18: Async / Await ✅"]
             adv6["Ch 19: Playwright Basics ✅"]
-            adv7["Ch 20: Inheritance"]
+            adv7["Ch 20: TypeScript Basics"]
         end
 
         subgraph ts["🟦 TypeScript"]
@@ -316,6 +316,12 @@ LearnPlaywrightBatch2X/
 │   ├── package.json                     # Playwright dependency config
 │   └── sdetlive.pdf                     # Course reference material
 │
+├── chapter_20_TypeScript_Basics/        ✅ TypeScript — module exports & imports
+│   └── Export_Import2/
+│       ├── 169_Utils.js                 # Named exports & imports
+│       ├── 170_Logger.js                # Default export & import
+│       └── ExplainDefault.md            # Export/Import guide
+│
 └── README.md                           👋 You are here
 ```
 
@@ -400,7 +406,7 @@ journey
 | 6 | Strings & Advanced | Ch 13–14 | Use JS data structures |
 | 7 | Async (Callbacks → Promises) | Ch 16–17 | Handle async work ✅ |
 | 8 | Async/Await + Playwright Basics | Ch 18–19 | Modern async, test runner setup ✅ |
-| 9 | TypeScript | Ch 21–24 | Type-safe automation code |
+| 9 | TypeScript | Ch 20–24 | Types, exports/imports, interfaces, enums, generics |
 | 10–12 | Playwright | Ch 25–28 | First passing test, POM, CI |
 
 ---
@@ -1917,6 +1923,51 @@ npx playwright --version     # check Playwright version
 
 ---
 
+## 📖 What's in Chapter 20 — TypeScript Basics (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `Export_Import2/169_Utils.js` | Named Exports | Exporting multiple items with `export` keyword |
+| `Export_Import2/170_Logger.js` | Default Export | Exporting a single main value with `export default` |
+| `Export_Import2/ExplainDefault.md` | Export/Import Guide | Complete reference for default vs named exports |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 20 — TypeScript))
+    Named Exports
+      export const
+      export function
+      import { name }
+      import * as namespace
+    Default Exports
+      export default
+      import item
+      Single export per module
+    Comparison
+      Multiple vs single
+      Curly braces
+      Renaming with as
+    Use Cases
+      Utility functions
+      Main entry points
+      Configuration objects
+```
+
+### Run them
+
+```bash
+cd chapter_20_TypeScript_Basics/Export_Import2
+node 169_Utils.js          # → named imports from utils.js
+node 170_Logger.js         # → default import from logger.js
+cat ExplainDefault.md      # → read the export/import guide
+```
+
+---
+
 ## 🔭 What's Coming Next
 
 ```mermaid
@@ -1950,6 +2001,7 @@ graph TD
 - ✅ Chapter 17 — **Promises**: Promise basics, resolve/reject, finally, Promise.all, API simulations, interview questions (files `154`–`160`)
 - ✅ Chapter 18 — **Async/Await**: async functions, try/catch/finally, parallel vs sequential execution, Playwright login test (files `161`–`167`)
 - ✅ Chapter 19 — **Playwright Basics**: Project setup with Playwright dependency, course reference material
+- ✅ Chapter 20 — **TypeScript Basics**: Named exports, default exports, complete export/import guide (files `169`–`170`)
 
 ---
 
