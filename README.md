@@ -7,9 +7,9 @@
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Status](https://img.shields.io/badge/Batch-In%20Progress-orange?style=for-the-badge)
 
-**Structured learning resource for mastering JavaScript fundamentals and Playwright automation testing**
+**Structured learning resource for mastering JavaScript, OOP, TypeScript, and Playwright automation testing**
 
-*Zero to automation hero — JavaScript basics → Advanced JS → TypeScript → Playwright*
+*Zero to automation hero — JavaScript basics → Advanced JS → OOP → TypeScript → Playwright*
 
 [Quick Start](#-quick-start) · [Curriculum](#-curriculum-roadmap) · [Chapters](#-chapters-overview) · [What You'll Build](#-what-youll-build)
 
@@ -26,7 +26,8 @@ This repository is your **chapter-by-chapter course companion** for learning Jav
 ### What you'll learn
 
 - **JavaScript Fundamentals** — variables, identifiers, literals, operators, control flow
-- **Advanced JavaScript** — functions, arrays, objects, callbacks, promises, async/await, OOP
+- **Advanced JavaScript** — functions, arrays, objects, callbacks, promises, async/await
+- **Object-Oriented Programming** — classes, constructors, encapsulation, inheritance, polymorphism
 - **TypeScript** — types, interfaces, enums, generics
 - **Playwright** — setup, locators, assertions, fixtures, POM, debugging, CI
 
@@ -62,21 +63,15 @@ graph TB
             adv4["Ch 17: Promises ✅"]
             adv5["Ch 18: Async / Await ✅"]
             adv6["Ch 19: Playwright Basics ✅"]
-            adv7["Ch 20: TypeScript Basics"]
+            adv7["Ch 20: TypeScript Basics ✅"]
         end
 
-        subgraph ts["🟦 TypeScript"]
-            ts1["Ch 21: TS Fundamentals"]
-            ts2["Ch 22: Interfaces"]
-            ts3["Ch 23: Enums"]
-            ts4["Ch 24: Generics"]
-        end
-
-        subgraph pw["🎭 Playwright"]
-            pw1["Ch 25: PW Fundamentals"]
-            pw2["Ch 26: Locators & Assertions"]
-            pw3["Ch 27: Fixtures & POM"]
-            pw4["Ch 28: Debugging & CI"]
+        subgraph oop["🟦 OOP with JS"]
+            oop1["Ch 21: Classes & Objects ✅"]
+            oop2["Ch 22: Encapsulation ✅"]
+            oop3["Ch 23: Inheritance ✅"]
+            oop4["Ch 24: Polymorphism ✅"]
+            oop5["Ch 25: OOP Interview Qs ✅"]
         end
 
         subgraph extras["🎯 Bonus"]
@@ -85,7 +80,7 @@ graph TB
         end
     end
 
-    js --> adv --> ts --> pw --> extras
+    js --> adv --> oop --> extras
 
     style js fill:#e1f5fe,stroke:#01579b
     style adv fill:#fff3e0,stroke:#e65100
@@ -317,10 +312,47 @@ LearnPlaywrightBatch2X/
 │   └── sdetlive.pdf                     # Course reference material
 │
 ├── chapter_20_TypeScript_Basics/        ✅ TypeScript — module exports & imports
-│   └── Export_Import2/
+│   └── 01_Export_Import/
+│       ├── 168_EXPORT_IMPORT.js         # Named exports & imports
 │       ├── 169_Utils.js                 # Named exports & imports
 │       ├── 170_Logger.js                # Default export & import
 │       └── ExplainDefault.md            # Export/Import guide
+│
+├── chapter_21_Classes_and_Objects/      ✅ OOP — classes, constructors, methods, static, private fields
+│   ├── 171_Class_Object.js              # Class basics — attributes & methods
+│   ├── 172_Class_Object2.js             # Class instantiation & usage
+│   ├── 173_Car.js                       # Constructor pattern — Car example
+│   ├── 174_REAL_Browser.js             # Real-world: TestCase class
+│   ├── 175_IQ.js                        # Class interview questions
+│   ├── 176_Private_Public.js            # Private fields (#) & public fields
+│   ├── 177_Statis.js                    # Static properties & methods
+│   └── 178_Statis.js                    # Static deep dive
+│
+├── chapter_22_Encapsulation/            ✅ Encapsulation — private fields, getters/setters
+│   ├── 179_Ecap.js                      # Encapsulation with private #balance
+│   ├── 180_REAK_EXAMPLE.js              # Real-world: Person with private children
+│   ├── 181_Ecap_Car.js                  # Car encapsulation pattern
+│   └── 182_ECap_Bank.js                 # Bank account encapsulation
+│
+├── chapter_23_Inheritance/              ✅ Inheritance — single, multi-level, hierarchical
+│   ├── 183_Single_Inheritance.js        # extends keyword — BasePage → LoginPage
+│   ├── 184_SI_Example.js                # Single inheritance example
+│   ├── 185_Single_Inheritance_Con.js    # Constructor chaining in inheritance
+│   ├── 186_IQ.js                        # Inheritance interview Q&A
+│   ├── 187_IQ2.js                       # More inheritance interview questions
+│   ├── 188_REAL_PageObject_Model.js     # POM-style inheritance (LoginPage, DashboardPage, CartPage)
+│   ├── 189_Multiple_Inheritance.js      # Mixin-based multiple inheritance
+│   ├── 190_Multiple_Level_Inheritance.js # Multi-level inheritance chain
+│   └── 191_Hierarchial_Inheritance.js   # Hierarchical inheritance (one parent, many children)
+│
+├── chapter_24_Polymorphism/             ✅ Polymorphism — method overriding
+│   └── 192_Method_Overriding.js         # BaseTest / APIPage — override setup()
+│
+├── chapter_25_OOP_Interview_Questions/  ✅ OOP — practice problems & interview prep
+│   ├── EX1.js                           # Bug class — constructor & method
+│   ├── EX2.js                           # OOP exercise 2
+│   ├── EX3.js                           # OOP exercise 3
+│   └── EX4.js                           # Method chaining with `return this`
 │
 └── README.md                           👋 You are here
 ```
@@ -389,11 +421,12 @@ journey
         Callbacks & Promises: 5: Ch16-Ch17
         Async / Await: 5: Ch18
         Playwright Basics: 3: Ch19
-    section TypeScript
-        TS Basics → Generics: 5: Ch20-Ch23
-    section Playwright
-        Fundamentals: 5: Ch23
-        CLI & Debugging: 5: Ch24-Ch26
+    section TypeScript & OOP
+        TS Basics: 4: Ch20
+        Classes & Objects: 4: Ch21
+        Encapsulation: 3: Ch22
+        Inheritance: 4: Ch23
+        Polymorphism & OOP IQ: 4: Ch24-Ch25
 ```
 
 | Week | Topic | Chapters | Outcome |
@@ -406,8 +439,9 @@ journey
 | 6 | Strings & Advanced | Ch 13–14 | Use JS data structures |
 | 7 | Async (Callbacks → Promises) | Ch 16–17 | Handle async work ✅ |
 | 8 | Async/Await + Playwright Basics | Ch 18–19 | Modern async, test runner setup ✅ |
-| 9 | TypeScript | Ch 20–24 | Types, exports/imports, interfaces, enums, generics |
-| 10–12 | Playwright | Ch 25–28 | First passing test, POM, CI |
+| 9 | TypeScript Basics | Ch 20 | Export, import, default vs named ✅ |
+| 10 | OOP in JS | Ch 21–24 | Classes, encapsulation, inheritance, polymorphism ✅ |
+| 11 | OOP Interview Practice | Ch 25 | Bug class, method chaining, interview prep ✅ |
 
 ---
 
@@ -430,14 +464,11 @@ flowchart LR
     subgraph E["Playwright Basics"]
         E1[Setup & Config]
     end
-    subgraph F["TypeScript"]
-        F1[Types] --> F2[Interfaces] --> F3[Generics]
-    end
-    subgraph G["Playwright"]
-        G1[Setup] --> G2[Locators] --> G3[POM] --> G4[CI/Debug]
+    subgraph F["TypeScript & OOP"]
+        F1[Exports/Imports] --> F2[Classes] --> F3[Encapsulation] --> F4[Inheritance] --> F5[Polymorphism]
     end
 
-    A --> B --> C --> D --> E --> F --> G
+    A --> B --> C --> D --> E --> F
 
     style A fill:#e3f2fd
     style B fill:#fff8e1
@@ -445,7 +476,6 @@ flowchart LR
     style D fill:#e8f5e9
     style E fill:#fce4ec
     style F fill:#e0f7fa
-    style G fill:#ede7f6
 ```
 
 ---
@@ -1929,9 +1959,10 @@ npx playwright --version     # check Playwright version
 
 | File | Topic | What you'll learn |
 |------|-------|-------------------|
-| `Export_Import2/169_Utils.js` | Named Exports | Exporting multiple items with `export` keyword |
-| `Export_Import2/170_Logger.js` | Default Export | Exporting a single main value with `export default` |
-| `Export_Import2/ExplainDefault.md` | Export/Import Guide | Complete reference for default vs named exports |
+| `01_Export_Import/168_EXPORT_IMPORT.js` | Named Exports | Exporting multiple items with `export` keyword |
+| `01_Export_Import/169_Utils.js` | More Exports | Additional named export patterns |
+| `01_Export_Import/170_Logger.js` | Default Export | Exporting a single main value with `export default` |
+| `01_Export_Import/ExplainDefault.md` | Export/Import Guide | Complete reference for default vs named exports |
 
 ### Key Concepts
 
@@ -1960,10 +1991,216 @@ mindmap
 ### Run them
 
 ```bash
-cd chapter_20_TypeScript_Basics/Export_Import2
+cd chapter_20_TypeScript_Basics/01_Export_Import
 node 169_Utils.js          # → named imports from utils.js
 node 170_Logger.js         # → default import from logger.js
 cat ExplainDefault.md      # → read the export/import guide
+```
+
+---
+
+## 📖 What's in Chapter 21 — Classes & Objects (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `171_Class_Object.js` | Class Basics | `class` syntax, attributes, methods |
+| `172_Class_Object2.js` | Class Instances | Creating objects from classes |
+| `173_Car.js` | Constructor Pattern | `constructor(name)` — Car example |
+| `174_REAL_Browser.js` | Real-World: TestCase | TestCase class with name, status, priority |
+| `175_IQ.js` | Interview Q&A | Class-based interview questions |
+| `176_Private_Public.js` | Private Fields | `#field` syntax — hidden API keys |
+| `177_Statis.js` | Static Members | `static` properties & methods |
+| `178_Statis.js` | Static Deep Dive | More static patterns |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 21 — Classes & Objects))
+    Class Syntax
+      class Name { }
+      constructor()
+      this.property
+    Methods
+      Instance methods
+      Static methods
+    Fields
+      Public fields
+      Private #fields
+    Real World
+      TestCase model
+      Car blueprint
+```
+
+### Run them
+
+```bash
+node chapter_21_Classes_and_Objects/171_Class_Object.js     # → class basics
+node chapter_21_Classes_and_Objects/173_Car.js              # → constructor pattern
+node chapter_21_Classes_and_Objects/174_REAL_Browser.js     # → TestCase class
+node chapter_21_Classes_and_Objects/176_Private_Public.js   # → private fields
+node chapter_21_Classes_and_Objects/177_Statis.js           # → static members
+```
+
+---
+
+## 📖 What's in Chapter 22 — Encapsulation (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `179_Ecap.js` | Encapsulation Basics | Private `#balance`, controlled deposit/getBalance |
+| `180_REAK_EXAMPLE.js` | Real-World: Person | Private children, getters/setters |
+| `181_Ecap_Car.js` | Car Encapsulation | Encapsulated car properties |
+| `182_ECap_Bank.js` | Bank Account | Full banking encapsulation pattern |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 22 — Encapsulation))
+    Private Fields
+      #fieldName
+      Hidden state
+      No external access
+    Getters/Setters
+      get method()
+      set method(value)
+      Controlled mutation
+    Real World
+      Bank accounts
+      Personal data
+      API credentials
+```
+
+### Run them
+
+```bash
+node chapter_22_Encapsulation/179_Ecap.js            # → encapsulation basics
+node chapter_22_Encapsulation/180_REAK_EXAMPLE.js    # → Person with private children
+node chapter_22_Encapsulation/182_ECap_Bank.js       # → bank account pattern
+```
+
+---
+
+## 📖 What's in Chapter 23 — Inheritance (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `183_Single_Inheritance.js` | Single Inheritance | `extends` — BasePage → LoginPage |
+| `184_SI_Example.js` | SI Example | Single inheritance usage |
+| `185_Single_Inheritance_Con.js` | Constructor Chaining | `super()` in child constructors |
+| `186_IQ.js` | Interview Q&A | Inheritance interview questions |
+| `187_IQ2.js` | More IQ | Additional inheritance Q&A |
+| `188_REAL_PageObject_Model.js` | POM Inheritance | LoginPage, DashboardPage, CartPage extending BasePage |
+| `189_Multiple_Inheritance.js` | Multiple Inheritance | Mixin-based multiple inheritance |
+| `190_Multiple_Level_Inheritance.js` | Multi-Level | Grandparent → Parent → Child chain |
+| `191_Hierarchial_Inheritance.js` | Hierarchical | One parent, many children |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 23 — Inheritance))
+    extends
+      Child extends Parent
+      super() call
+      Method reuse
+    Types
+      Single
+      Multi-level
+      Hierarchical
+    Real World
+      Page Object Model
+      Base test class
+    JavaScript
+      Prototype chain
+      instanceof
+```
+
+### Run them
+
+```bash
+node chapter_23_Inheritance/183_Single_Inheritance.js           # → extends basics
+node chapter_23_Inheritance/185_Single_Inheritance_Con.js       # → constructor chaining
+node chapter_23_Inheritance/188_REAL_PageObject_Model.js        # → POM inheritance
+node chapter_23_Inheritance/190_Multiple_Level_Inheritance.js   # → multi-level chain
+node chapter_23_Inheritance/191_Hierarchial_Inheritance.js      # → hierarchical
+```
+
+---
+
+## 📖 What's in Chapter 24 — Polymorphism (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `192_Method_Overriding.js` | Method Overriding | BaseTest.setup() overridden by APIPage |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 24 — Polymorphism))
+    Method Overriding
+      Same method name
+      Different behavior
+      Runtime resolution
+    Use Cases
+      Page-specific verify()
+      Test setup variants
+    Real World
+      LoginPage vs DashboardPage
+      APITest vs UITest
+```
+
+### Run them
+
+```bash
+node chapter_24_Polymorphism/192_Method_Overriding.js    # → method overriding
+```
+
+---
+
+## 📖 What's in Chapter 25 — OOP Interview Questions (Available Now)
+
+### Files
+
+| File | Topic | What you'll learn |
+|------|-------|-------------------|
+| `EX1.js` | Bug Class | Constructor with title & severity |
+| `EX2.js` | Exercise 2 | OOP practice problem |
+| `EX3.js` | Exercise 3 | OOP practice problem |
+| `EX4.js` | Method Chaining | `return this` for fluent API |
+
+### Key Concepts
+
+```mermaid
+mindmap
+  root((Chapter 25 — OOP Interview Questions))
+    Bug Class
+      Constructor pattern
+      display() method
+    Method Chaining
+      return this
+      Fluent API
+      Counter example
+    Practice
+      OOP design
+      Real-world modeling
+```
+
+### Run them
+
+```bash
+node chapter_25_OOP_Interview_Questions/EX1.js    # → Bug class
+node chapter_25_OOP_Interview_Questions/EX4.js    # → method chaining
 ```
 
 ---
@@ -1972,13 +2209,13 @@ cat ExplainDefault.md      # → read the export/import guide
 
 ```mermaid
 graph TD
-    subgraph next["Next Up — TypeScript"]
-        N1["Ch 20: TypeScript Fundamentals"]
-        N2["Ch 21: Interfaces"]
-        N3["Ch 22: Enums & Generics"]
+    subgraph next["Next Up — More OOP & Practice"]
+        N1["More OOP Patterns"]
+        N2["Real-world Test Projects"]
+        N3["Interview Prep Bank"]
     end
 
-    style next fill:#e0f7fa,stroke:#00838f
+    style next fill:#e8f5e9,stroke:#2e7d32
 ```
 
 **Just shipped:**
@@ -2001,7 +2238,12 @@ graph TD
 - ✅ Chapter 17 — **Promises**: Promise basics, resolve/reject, finally, Promise.all, API simulations, interview questions (files `154`–`160`)
 - ✅ Chapter 18 — **Async/Await**: async functions, try/catch/finally, parallel vs sequential execution, Playwright login test (files `161`–`167`)
 - ✅ Chapter 19 — **Playwright Basics**: Project setup with Playwright dependency, course reference material
-- ✅ Chapter 20 — **TypeScript Basics**: Named exports, default exports, complete export/import guide (files `169`–`170`)
+- ✅ Chapter 20 — **TypeScript Basics**: Named exports, default exports, complete export/import guide (files `168`–`170`)
+- ✅ Chapter 21 — **Classes & Objects**: Class syntax, constructors, methods, static members, private fields (files `171`–`178`)
+- ✅ Chapter 22 — **Encapsulation**: Private fields (`#`), controlled access via getters/setters, real-world banking example (files `179`–`182`)
+- ✅ Chapter 23 — **Inheritance**: `extends` keyword, single/multi-level/hierarchical inheritance, POM-style patterns (files `183`–`191`)
+- ✅ Chapter 24 — **Polymorphism**: Method overriding, runtime polymorphism with page objects (file `192`)
+- ✅ Chapter 25 — **OOP Interview Questions**: Bug class, method chaining, interview practice problems (files `EX1`–`EX4`)
 
 ---
 
@@ -2010,18 +2252,20 @@ graph TD
 ```mermaid
 graph LR
     Start([Start]) --> JS[Solid JavaScript foundation]
-    JS --> TS[TypeScript fluency]
+    JS --> OOP[OOP with JS classes]
+    OOP --> TS[TypeScript fluency]
     TS --> PW[Playwright tests with POM]
     PW --> CI[CI/CD-ready test suites]
     CI --> Job([SDET-ready 🎯])
 
     style Start fill:#e8f5e9
+    style OOP fill:#e0f7fa
     style Job fill:#ffe0b2
 ```
 
 By graduation you'll have:
 
-- ✅ A complete JavaScript + TypeScript portfolio
+- ✅ A complete JavaScript + TypeScript + OOP portfolio
 - ✅ Production-grade Playwright test suites with the Page Object Model
 - ✅ Hands-on experience with **Playwright CLI**, **codegen**, **trace viewer**
 - ✅ Interview prep — coding questions + Q&A banks
